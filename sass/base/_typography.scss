@@ -1,0 +1,11 @@
+h1 .logo {
+    font-family: Shrikhand;
+    font-weight: 700;
+    color: $color-logo;
+    width: 100%;
+    height: 100px;
+    // @include mobile-only {
+    //     text-align: center;
+    //     font-size: 30px;
+    // }
+}  
