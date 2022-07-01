@@ -22,37 +22,41 @@
 <body>
     <header>
         <h1 class="logo">ohmyfood</h1>
-        <nav>
-            <div><i class="fa-solid fa-location-dot"></i></div>
-            <form>
-                <input type="search" value="Paris, Belleville" name="search-location" id="-search-location">
-            </form>
-        </nav>
     </header>
 
+    <nav>
+        <div class="search-bar">
+            <form>
+                <span class="search-bar__icon"><i class="fa-solid fa-location-dot"></i></span>
+                <input type="search" value="Paris, Belleville" placeholder="Paris, Belleville"
+                    name="search-bar__location" id="search-bar__location">
+            </form>
+        </div>
+    </nav>
+
     <main>
-        <section id="explorer">
-            <h1>Réservez le menu qui vous convient</h1>
-            <p>Découvrez des restaurants d'exception, sélectionnés par nos soins.</p>
-            <button>Explorez nos restaurants</button>
+        <section class="explorer">
+            <h1 class="explorer__title">Réservez le menu qui vous convient</h1>
+            <p class="explorer__txt">Découvrez des restaurants d'exception, sélectionnés par nos soins.</p>
+            <button class="explorer__btn">Explorez nos restaurants</button>
         </section>
 
-        <section id="functioning-container">
-            <h2 id="functioning-title">Fonctionnement</h2>
-            <div id="functioning-list">
-                <div class="functioning-btn">
-                    <p class="functioning-number">1</p>
-                    <span class="functioning-icons"><i class="fa-solid fa-mobile-screen-button"></i></span>
+        <section class="functioning">
+            <h2 class="ftng__title">Fonctionnement</h2>
+            <div class="ftng__list">
+                <div class="ftng__btn">
+                    <span class="ftng__number">1</span>
+                    <span class="ftng__icons"><i class="fa-solid fa-mobile-screen-button"></i></span>
                     <p>Choisissez un restaurant</p>
                 </div>
-                <div class="functioning-btn">
-                    <p class="functioning-number">2</p>
-                    <span class="functioning-icons"><i class="fa-solid fa-list"></i></span>
+                <div class="ftng__btn">
+                    <span class="ftng__number">2</span>
+                    <span class="ftng__icons"><i class="fa-solid fa-list"></i></span>
                     <p>Composez votre menu</p>
                 </div>
-                <div class="functioning-btn">
-                    <p class="functioning-number">2</p>
-                    <span class="functioning-icons"><i class="fa-solid fa-store"></i></span>
+                <div class="ftng__btn">
+                    <span class="ftng__number">2</span>
+                    <span class="ftng__icons"><i class="fa-solid fa-store"></i></span>
                     <p>Dégustez au restaurant</p>
                 </div>
             </div>

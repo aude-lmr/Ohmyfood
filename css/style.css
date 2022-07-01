@@ -13,12 +13,45 @@ h1.logo {
   font-weight: 700;
   color: black;
   width: 100%;
-  height: 100px;
+  height: 30px;
+  text-align: center;
+  font-size: 40px;
 }
 @media screen and (max-width: 480px) {
   h1.logo {
-    text-align: center;
-    font-size: 30px;
+    font-size: 25px;
+    margin: 15px 0 5px 0;
+  }
+}
+
+.search-bar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: hsl(257deg, 0%, 92%);
+  height: 45px;
+  box-shadow: inset 0px 1px 1px 0px hsla(0deg, 0%, 77%, 0.86);
+}
+.search-bar form {
+  text-align: center;
+}
+.search-bar input[type=search] {
+  border: none;
+  font-weight: 500;
+  background-color: hsl(257deg, 0%, 92%);
+  height: 30px;
+  text-align: center;
+}
+@media screen and (max-width: 480px) {
+  .search-bar {
+    height: 34px;
+  }
+  .search-bar span.search-bar__icon {
+    font-size: 13px;
+  }
+  .search-bar input[type=search] {
+    font-size: 12px;
+    width: 70%;
   }
 }
 
