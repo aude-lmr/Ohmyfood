@@ -1,4 +1,4 @@
-*, *:before, *:after {
+* {
   box-sizing: border-box;
   margin: 0;
 }
@@ -12,6 +12,20 @@ a {
   text-decoration: none;
   color: black;
 }
+a .fa-utensils {
+  font-size: 12px;
+  padding-right: 12px;
+}
+a .fa-handshake-angle {
+  padding-right: 10px;
+  font-size: 10px;
+}
+
+ul {
+  list-style-type: none;
+  width: 100%;
+  padding: 0;
+}
 
 h1.logo {
   font-family: Shrikhand;
@@ -21,11 +35,28 @@ h1.logo {
   height: 30px;
   text-align: center;
   font-size: 40px;
+  margin: 18px 0 28px 0;
+}
+h1.logo.footer {
+  margin: 0;
+  text-align: center;
+  font-size: 15px;
+  width: 20%;
+  padding: 7px 0;
+  color: #FFFFFF;
+  font-weight: 300;
 }
 @media screen and (max-width: 480px) {
   h1.logo {
-    font-size: 25px;
-    margin: 15px 0 5px 0;
+    width: 100%;
+    font-size: 30px;
+  }
+  h1.logo.footer {
+    margin: 0;
+    text-align: start;
+    font-size: 16px;
+    width: 100%;
+    padding: 7px 0;
   }
 }
 
@@ -219,6 +250,70 @@ h3 {
   }
   .restaurants__body {
     flex-direction: column;
+  }
+}
+.restaurants .fa-heart {
+  position: relative;
+  color: #FFF;
+  font-size: 15px;
+  background: #FFF;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  border-radius: 50%;
+  padding: 0.2em;
+}
+.restaurants .fa-heart::before {
+  content: "\f004";
+  font-weight: bold;
+}
+.restaurants .fa-heart:hover::before {
+  left: -9px;
+  top: -7px;
+  font-size: 17px;
+  position: absolute;
+  background: #FF79DA;
+  background: linear-gradient(to top left, #FF79DA 0%, #9356DC 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+footer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+  background: #353535;
+  color: white;
+  padding: 15px 20px;
+  font-weight: 500;
+  margin: 50px 0 0 0;
+}
+footer ul {
+  display: flex;
+  flex-direction: row;
+}
+footer ul li {
+  margin: 0 15px;
+  font-size: 16px;
+  font-weight: 400;
+}
+footer a {
+  color: #FFFFFF;
+}
+@media screen and (max-width: 480px) {
+  footer {
+    display: flex;
+    flex-direction: column;
+    padding: 15px 35px 31px;
+  }
+  footer ul {
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+  footer ul li {
+    margin: 0;
+    padding: 4px 0 0 0;
+    font-size: 15px;
   }
 }
 
