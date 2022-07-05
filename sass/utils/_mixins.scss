@@ -3,3 +3,26 @@
         @content;
     }
 }
+
+@mixin heading-menu {
+    font-size: 28px;
+    font-family: 'Shrikhand';
+    width: 100%;
+    text-align: center;
+    margin: 25px auto;
+    font-weight: 500;
+}
+
+@mixin dim-img-background {
+    width: 100%;
+    height:200px;
+}
+
+@mixin section-meals {
+    top: -26px;
+    position: relative;
+    width: 100%;
+    border-radius: 35px 35px 0 0;
+    border: 1px solid white;
+    background: $background-lighter-grey;
+}

@@ -1,0 +1,21 @@
+header .fa-arrow-left {
+    font-size: 18px;
+    position: relative;
+    left: -35px;
+}
+
+.background-img {
+    @include dim-img-background;
+    img {
+        @include dim-img-background;
+        object-fit: cover;
+    }
+}
+
+.meals {
+    @include section-meals;
+    h1 {
+        @include heading-menu;
+    }
+}
+

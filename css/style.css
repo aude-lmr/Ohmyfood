@@ -20,6 +20,9 @@ a .fa-handshake-angle {
   padding-right: 10px;
   font-size: 10px;
 }
+a .fa-arrow-left {
+  color: #353535;
+}
 
 ul {
   list-style-type: none;
@@ -35,7 +38,7 @@ h1.logo {
   height: 30px;
   text-align: center;
   font-size: 40px;
-  margin: 18px 0 28px 0;
+  margin: 15px 0;
 }
 h1.logo.footer {
   margin: 0;
@@ -126,7 +129,7 @@ h3 {
 .explorer__btn {
   color: white;
   font-weight: 500;
-  background: linear-gradient(135deg, #FFFFFF 0%, #FF79DA 0%, #9356DC 100%);
+  background: linear-gradient(135deg, #FF79DA 0%, #9356DC 100%);
   border: none;
   border-radius: 40px;
   height: 35px;
@@ -315,6 +318,39 @@ footer a {
     padding: 4px 0 0 0;
     font-size: 15px;
   }
+}
+
+header .fa-arrow-left {
+  font-size: 18px;
+  position: relative;
+  left: -35px;
+}
+
+.background-img {
+  width: 100%;
+  height: 200px;
+}
+.background-img img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.meals {
+  top: -26px;
+  position: relative;
+  width: 100%;
+  border-radius: 35px 35px 0 0;
+  border: 1px solid white;
+  background: rgb(246, 246, 246);
+}
+.meals h1 {
+  font-size: 28px;
+  font-family: "Shrikhand";
+  width: 100%;
+  text-align: center;
+  margin: 25px auto;
+  font-weight: 500;
 }
 
 /*# sourceMappingURL=style.css.map */
