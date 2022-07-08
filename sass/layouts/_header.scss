@@ -1,8 +1,20 @@
-header .fa-arrow-left {
-    font-size: 18px;
-    position: relative;
-    left: -45px;
+header.menu {
+    display: flex;
+    align-items: center;
+    text-align: right;
+    h1 {
+        width: 80%;
+    }
+    .return {
+        width: 20%;
+        text-align: right;
+    }
+    .fa-arrow-left {
+        font-size: 15px;
+    }
+
 }
+
 
 .background-img {
     @include dim-img-background;

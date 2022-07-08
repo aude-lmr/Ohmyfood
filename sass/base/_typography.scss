@@ -24,8 +24,8 @@ ul {
 }
 
 h1.logo { 
-    display: flex;
-    justify-content: center;
+    // display: flex;
+    // justify-content: center;
     align-items: center;
     font-family: Shrikhand;
     font-weight: 700;
@@ -47,12 +47,12 @@ h1.logo {
     @include mobile-only {
         width:100%;
         font-size: 30px;
-        justify-content: center;
-        flex-direction: row;
-        align-items: center;
+        // justify-content: center;
+        // flex-direction: row;
+        text-align: center;
             &.footer {
                 margin: 0;
-                justify-content: flex-start;
+                text-align:start;
                 font-size: 16px;
                 width: 100%;
                 padding: 7px 0;
@@ -99,7 +99,7 @@ h3 {
         width: 100%;
         justify-content: flex-start;
         align-items: center;
-        margin: 0 0 20px
+        margin: 0 0 20px 6px;
     }
 
     .meals-list {
@@ -110,16 +110,23 @@ h3 {
                 width: 90%;
                 margin: 10px auto;
                 padding: 10px 10px 5px 0px;
-                background: $background-lightgrey;
+                background: $background-items;
                 border-radius: 10px;
                 min-height: 50px;
                 cursor: pointer;
+                box-shadow: $box-shadow;
             }
             h2 {
                 font-size: 14px;
                 margin: 0 0 5px 20px;
                 text-transform: uppercase;
                 font-weight: 400;
+            }
+            .underline {
+                height: 3px;
+                width: 10%;
+                border: solid 2px #99E2D0;
+                margin: 0 0 5px 20px;
             }
             h3 {
                 text-align: start;
@@ -142,6 +149,11 @@ h3 {
             .meals-infos {
             display: flex;
             justify-content: space-between;
+            }
+            .meals-check {
+                display: none;
+                position: relative;
+                bottom: 10px;
             }
     }
 }

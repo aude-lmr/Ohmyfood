@@ -1,15 +1,34 @@
 .fa-heart {
     position: relative;
     color: black;
-    font-size: 15px;
+    background-image: $heart-start;
+    font-size: 20px;
     &::before { 
-            content: "\f004";
+            content: "\f004"; 
         }
         
     &:hover::before {
+        animation-name: heart-animation;
+        animation-duration: 400ms;
             font-weight: bold;     
-            background: linear-gradient(to top left, #FF79DA 0%, #9356DC 100%);
+            background-image: $heart-end;
             -webkit-background-clip: text;
+            background-clip: text;
             -webkit-text-fill-color: transparent;
         }
+}
+
+@keyframes heart-animation {
+    0% {
+        opacity: 0.3;
+    }
+    50% {
+        opacity: 0.5;
+    }
+    75%    {
+        opacity: 0.7; 
+    }
+    100% {
+        opacity: 1;
+    }
 }

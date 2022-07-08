@@ -31,8 +31,6 @@ ul {
 }
 
 h1.logo {
-  display: flex;
-  justify-content: center;
   align-items: center;
   font-family: Shrikhand;
   font-weight: 700;
@@ -55,13 +53,11 @@ h1.logo.footer {
   h1.logo {
     width: 100%;
     font-size: 30px;
-    justify-content: center;
-    flex-direction: row;
-    align-items: center;
+    text-align: center;
   }
   h1.logo.footer {
     margin: 0;
-    justify-content: flex-start;
+    text-align: start;
     font-size: 16px;
     width: 100%;
     padding: 7px 0;
@@ -95,18 +91,20 @@ h3 {
 }
 
 .meals {
+  display: flex;
+  flex-direction: column;
   top: -26px;
   position: relative;
   width: 100%;
   border-radius: 35px 35px 0 0;
   border: 1px solid white;
   background: rgb(246, 246, 246);
-  padding: 28px 0;
+  padding: 28px 0 0 0;
 }
 .meals h1 {
   font-size: 25px;
   font-family: "Shrikhand";
-  margin: 0 20px 0px 16px;
+  margin: 0 20px;
   font-weight: 500;
 }
 .meals .meals-title {
@@ -114,7 +112,7 @@ h3 {
   width: 100%;
   justify-content: flex-start;
   align-items: center;
-  margin: 0 0 20px;
+  margin: 0 0 20px 6px;
 }
 .meals .meals-list {
   display: flex;
@@ -125,16 +123,23 @@ h3 {
   width: 90%;
   margin: 10px auto;
   padding: 10px 10px 5px 0px;
-  background: rgb(234, 234, 234);
+  background: white;
   border-radius: 10px;
   min-height: 50px;
   cursor: pointer;
+  box-shadow: 1px 4px 15px 1px rgba(0, 0, 0, 0.2);
 }
 .meals .meals-list h2 {
   font-size: 14px;
   margin: 0 0 5px 20px;
   text-transform: uppercase;
   font-weight: 400;
+}
+.meals .meals-list .underline {
+  height: 3px;
+  width: 10%;
+  border: solid 2px #99E2D0;
+  margin: 0 0 5px 20px;
 }
 .meals .meals-list h3 {
   text-align: start;
@@ -158,26 +163,49 @@ h3 {
   display: flex;
   justify-content: space-between;
 }
+.meals .meals-list .meals-check {
+  display: none;
+  position: relative;
+  bottom: 10px;
+}
 
 .fa-heart {
   position: relative;
   color: black;
-  font-size: 15px;
+  background-image: white;
+  font-size: 20px;
 }
 .fa-heart::before {
   content: "\f004";
 }
 .fa-heart:hover::before {
+  animation-name: heart-animation;
+  animation-duration: 400ms;
   font-weight: bold;
-  background: linear-gradient(to top left, #FF79DA 0%, #9356DC 100%);
+  background-image: linear-gradient(to top left, #FF79DA 0%, #9356DC 100%);
   -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
-.btn.explorer {
+@keyframes heart-animation {
+  0% {
+    opacity: 0.3;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  75% {
+    opacity: 0.7;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.btn.gradient {
   color: white;
   font-weight: 500;
-  background: linear-gradient(135deg, #FF79DA 0%, #9356DC 100%);
+  background: linear-gradient(175deg, #FF79DA 15%, #9356DC 100%);
   border: none;
   border-radius: 40px;
   height: 35px;
@@ -185,6 +213,10 @@ h3 {
   padding: 10px 12px;
   cursor: pointer;
   box-shadow: 1px 4px 15px 1px rgba(0, 0, 0, 0.2);
+  margin: 0 auto;
+}
+.btn.gradient.menu {
+  width: 45%;
 }
 
 .search-bar {
@@ -396,10 +428,20 @@ footer a {
   }
 }
 
-header .fa-arrow-left {
-  font-size: 18px;
-  position: relative;
-  left: -45px;
+header.menu {
+  display: flex;
+  align-items: center;
+  text-align: right;
+}
+header.menu h1 {
+  width: 80%;
+}
+header.menu .return {
+  width: 20%;
+  text-align: right;
+}
+header.menu .fa-arrow-left {
+  font-size: 15px;
 }
 
 .background-img {

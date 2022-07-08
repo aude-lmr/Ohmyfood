@@ -7,7 +7,7 @@
 @mixin heading-menu {
     font-size: 25px;
     font-family: 'Shrikhand';
-    margin: 0 20px 0px 16px;
+    margin: 0 20px;
     font-weight: 500;
 }
 
@@ -17,11 +17,13 @@
 }
 
 @mixin section-meals {
+    display: flex;
+    flex-direction: column;
     top: -26px;
     position: relative;
     width: 100%;
     border-radius: 35px 35px 0 0;
     border: 1px solid white;
     background: $background-lighter-grey;
-    padding: 28px 0;
+    padding: 28px 0 0 0;
 }
