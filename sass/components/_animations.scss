@@ -1,0 +1,15 @@
+.fa-heart {
+    position: relative;
+    color: black;
+    font-size: 15px;
+    &::before { 
+            content: "\f004";
+        }
+        
+    &:hover::before {
+            font-weight: bold;     
+            background: linear-gradient(to top left, #FF79DA 0%, #9356DC 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+}

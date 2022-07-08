@@ -5,11 +5,9 @@
 }
 
 @mixin heading-menu {
-    font-size: 28px;
+    font-size: 25px;
     font-family: 'Shrikhand';
-    width: 100%;
-    text-align: center;
-    margin: 25px auto;
+    margin: 0 20px 0px 16px;
     font-weight: 500;
 }
 
@@ -25,4 +23,5 @@
     border-radius: 35px 35px 0 0;
     border: 1px solid white;
     background: $background-lighter-grey;
+    padding: 28px 0;
 }

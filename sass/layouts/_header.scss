@@ -1,7 +1,7 @@
 header .fa-arrow-left {
     font-size: 18px;
     position: relative;
-    left: -35px;
+    left: -45px;
 }
 
 .background-img {
@@ -12,10 +12,5 @@ header .fa-arrow-left {
     }
 }
 
-.meals {
-    @include section-meals;
-    h1 {
-        @include heading-menu;
-    }
-}
+
 
