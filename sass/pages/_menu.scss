@@ -1,0 +1,11 @@
+.main-menu {
+    background: $background-lighter-grey;
+}
+
+.background-img {
+    @include dim-img-background;
+    img {
+        @include dim-img-background;
+        object-fit: cover;
+    }
+}

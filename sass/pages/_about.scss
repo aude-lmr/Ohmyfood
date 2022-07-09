@@ -111,6 +111,7 @@
     flex-direction: row;
     flex-wrap: wrap;
     align-items: center;
+    margin-bottom: 45px;
     &__cards {
         display: flex;
         flex-direction: column;
@@ -146,7 +147,7 @@
             flex-direction: row;
             align-items: center;
             justify-content: space-between;
-            height: 50px;
+            min-height: 50px;
             margin: 0 10px;
             &--text {
             padding: 5px 10px;
@@ -163,7 +164,7 @@
         flex-direction: column;
         flex-wrap: nowrap;
         &__cards {
-            width: 85%;
+            width: 90%;
         }
         &__body {
             flex-direction: column;
