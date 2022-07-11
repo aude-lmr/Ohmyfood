@@ -81,8 +81,9 @@ h2 {
 }
 
 h3 {
-    font-size: 13px;
+    font-size: 15px;
     font-weight: 600;
+    padding: 5px 0 0 5px;
 }
 
 // Menus
@@ -98,33 +99,39 @@ h3 {
         justify-content: flex-start;
         align-items: center;
         margin: 0 0 20px 6px;
+        align-items: center;
     }
 
     .meals-list {
         display: flex;
         flex-direction: column;
         margin: 0 0 15px;
+        align-items: center;
             .meals-items {
+                display: flex;
                 width: 90%;
-                margin: 10px auto;
-                padding: 10px 10px 5px 0px;
-                background: $background-items;
+                background: white;
                 border-radius: 10px;
                 min-height: 50px;
                 cursor: pointer;
-                box-shadow: $box-shadow;
+                box-shadow: 1px 4px 15px 1px rgb(0 0 0 / 20%);
+                justify-content: space-between;
+                align-items: center;
+                margin: 5px 0;
             }
             h2 {
                 font-size: 14px;
                 margin: 0 0 5px 20px;
                 text-transform: uppercase;
                 font-weight: 400;
+                align-self: flex-start;
             }
             .underline {
                 height: 3px;
                 width: 10%;
                 border: solid 2px #99E2D0;
                 margin: 0 0 5px 20px;
+                align-self: flex-start;
             }
             h3 {
                 text-align: start;
@@ -142,16 +149,33 @@ h3 {
             p {
                 font-size: 12px;
                 font-weight: 700;
-                padding: 0 10px;
             }
-            .meals-infos {
-            display: flex;
-            justify-content: space-between;
+            .meals-name {
+                display: flex;
+                flex-direction: column;
+                height: 100%;
+                width: 65%;
+            }
+            .meals-price {
+                width: 5%;
+                position: relative;
+                top: 10px;
+                margin-right: 20px;
             }
             .meals-check {
                 display: none;
                 position: relative;
-                bottom: 10px;
+                width: 50px;
+                background-color: $color-tertiary;
+                border-radius: 0 10px 10px 0;
+                min-height: 50px;
+                .fa-circle-check {
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%,-50%);
+                    color: #FFFFFF;
+                }
             }
     }
 }

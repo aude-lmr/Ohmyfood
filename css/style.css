@@ -85,8 +85,9 @@ h2 {
 }
 
 h3 {
-  font-size: 13px;
+  font-size: 15px;
   font-weight: 600;
+  padding: 5px 0 0 5px;
 }
 
 .meals {
@@ -111,33 +112,39 @@ h3 {
   justify-content: flex-start;
   align-items: center;
   margin: 0 0 20px 6px;
+  align-items: center;
 }
 .meals .meals-list {
   display: flex;
   flex-direction: column;
   margin: 0 0 15px;
+  align-items: center;
 }
 .meals .meals-list .meals-items {
+  display: flex;
   width: 90%;
-  margin: 10px auto;
-  padding: 10px 10px 5px 0px;
   background: white;
   border-radius: 10px;
   min-height: 50px;
   cursor: pointer;
   box-shadow: 1px 4px 15px 1px rgba(0, 0, 0, 0.2);
+  justify-content: space-between;
+  align-items: center;
+  margin: 5px 0;
 }
 .meals .meals-list h2 {
   font-size: 14px;
   margin: 0 0 5px 20px;
   text-transform: uppercase;
   font-weight: 400;
+  align-self: flex-start;
 }
 .meals .meals-list .underline {
   height: 3px;
   width: 10%;
   border: solid 2px #99E2D0;
   margin: 0 0 5px 20px;
+  align-self: flex-start;
 }
 .meals .meals-list h3 {
   text-align: start;
@@ -155,16 +162,33 @@ h3 {
 .meals .meals-list p {
   font-size: 12px;
   font-weight: 700;
-  padding: 0 10px;
 }
-.meals .meals-list .meals-infos {
+.meals .meals-list .meals-name {
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
+  height: 100%;
+  width: 65%;
+}
+.meals .meals-list .meals-price {
+  width: 5%;
+  position: relative;
+  top: 10px;
+  margin-right: 20px;
 }
 .meals .meals-list .meals-check {
   display: none;
   position: relative;
-  bottom: 10px;
+  width: 50px;
+  background-color: #99E2D0;
+  border-radius: 0 10px 10px 0;
+  min-height: 50px;
+}
+.meals .meals-list .meals-check .fa-circle-check {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #FFFFFF;
 }
 
 .fa-heart {
@@ -373,6 +397,7 @@ h3 {
 .restaurants__cards__body p {
   font-size: 13px;
   margin: 3px 0;
+  padding: 2px 0 3px 5px;
 }
 @media screen and (max-width: 480px) {
   .restaurants {
