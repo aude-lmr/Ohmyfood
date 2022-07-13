@@ -234,7 +234,7 @@ h3 {
   top: 0;
   z-index: 1;
   background-color: rgb(246, 246, 246);
-  animation: loader 8s ease-in-out both;
+  animation: loader 6s ease-in-out both;
 }
 .loader-container .loader {
   width: 230px;
@@ -273,13 +273,13 @@ h3 {
   animation-fill-mode: both;
 }
 .loader-container .loader span:nth-child(1)::before {
-  animation-delay: 0.5s;
+  animation-delay: 0.2s;
 }
 .loader-container .loader span:nth-child(2)::before {
-  animation-delay: 1.5s;
+  animation-delay: 1s;
 }
 .loader-container .loader span:nth-child(3)::before {
-  animation-delay: 2.4s;
+  animation-delay: 2s;
 }
 
 @keyframes dot {
@@ -309,31 +309,31 @@ h3 {
   }
 }
 .meals-items:nth-child(1) {
-  animation-delay: 1s;
-}
-.meals-items:nth-child(2) {
-  animation-delay: 2s;
-}
-.meals-items:nth-child(3) {
   animation-delay: 3s;
 }
-.meals-items:nth-child(4) {
-  animation-delay: 4s;
-}
-.meals-items:nth-child(5) {
-  animation-delay: 5;
-}
-.meals-items:nth-child(6) {
+.meals-items:nth-child(2) {
   animation-delay: 6s;
 }
+.meals-items:nth-child(3) {
+  animation-delay: 9s;
+}
+.meals-items:nth-child(4) {
+  animation-delay: 12s;
+}
+.meals-items:nth-child(5) {
+  animation-delay: 15;
+}
+.meals-items:nth-child(6) {
+  animation-delay: 18s;
+}
 .meals-items:nth-child(7) {
-  animation-delay: 7s;
+  animation-delay: 21s;
 }
 .meals-items:nth-child(8) {
-  animation-delay: 8s;
+  animation-delay: 24s;
 }
 .meals-items:nth-child(9) {
-  animation-delay: 9s;
+  animation-delay: 17s;
 }
 
 @keyframes fade {
