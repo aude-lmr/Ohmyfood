@@ -9,8 +9,7 @@
         }
         
     &:hover::before {
-        animation-name: heart-animation;
-        animation-duration: 400ms;
+        animation: heart-animation 600ms ;
             font-weight: bold;     
             background-image: $heart-end;
             -webkit-background-clip: text;
@@ -62,7 +61,7 @@
             opacity: 0.5;
             &:nth-child(1) {background: $color-primary;}
             &:nth-child(2) {background: $color-secondary;}
-            &:nth-child(3) {background: $color-tertiary;}
+            &:nth-child(3) {background: $color-primary;}
             &:before {
                 content:"";
                 background: inherit;

@@ -202,8 +202,7 @@ h3 {
   content: "\f004";
 }
 .fa-heart:hover::before {
-  animation-name: heart-animation;
-  animation-duration: 400ms;
+  animation: heart-animation 600ms;
   font-weight: bold;
   background-image: linear-gradient(to top left, #FF79DA 0%, #9356DC 100%);
   -webkit-background-clip: text;
@@ -260,7 +259,7 @@ h3 {
   background: #FF79DA;
 }
 .loader-container .loader span:nth-child(3) {
-  background: #99E2D0;
+  background: #9356DC;
 }
 .loader-container .loader span:before {
   content: "";
