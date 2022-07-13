@@ -130,6 +130,7 @@ h3 {
   justify-content: space-between;
   align-items: center;
   margin: 6px 0;
+  animation: fade 12s;
 }
 .meals .meals-list h2 {
   font-size: 14px;
@@ -181,6 +182,7 @@ h3 {
   background-color: #99E2D0;
   border-radius: 0 10px 10px 0;
   min-height: 50px;
+  transform: none;
 }
 .meals .meals-list .meals-check .fa-circle-check {
   position: absolute;
@@ -193,7 +195,7 @@ h3 {
 .fa-heart {
   position: relative;
   color: black;
-  background-image: white;
+  background-image: #FFFFFF;
   font-size: 20px;
 }
 .fa-heart::before {
@@ -307,6 +309,42 @@ h3 {
     z-index: -1;
   }
 }
+.meals-items:nth-child(1) {
+  animation-delay: 1s;
+}
+.meals-items:nth-child(2) {
+  animation-delay: 2s;
+}
+.meals-items:nth-child(3) {
+  animation-delay: 3s;
+}
+.meals-items:nth-child(4) {
+  animation-delay: 4s;
+}
+.meals-items:nth-child(5) {
+  animation-delay: 5;
+}
+.meals-items:nth-child(6) {
+  animation-delay: 6s;
+}
+.meals-items:nth-child(7) {
+  animation-delay: 7s;
+}
+.meals-items:nth-child(8) {
+  animation-delay: 8s;
+}
+.meals-items:nth-child(9) {
+  animation-delay: 9s;
+}
+
+@keyframes fade {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 .btn.gradient {
   color: white;
   font-weight: 500;
@@ -322,7 +360,6 @@ h3 {
 }
 .btn.gradient.menu {
   width: 45%;
-  margin: 15px auto 0;
 }
 
 .search-bar {
@@ -465,6 +502,7 @@ h3 {
   padding: 3px 6px;
   font-weight: 500;
   border-radius: 2px;
+  color: #1b6150;
 }
 .restaurants__cards__body {
   display: flex;

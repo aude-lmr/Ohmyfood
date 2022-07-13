@@ -1,8 +1,9 @@
 $color-primary: #9356DC;
 $color-secondary: #FF79DA;
 $color-tertiary: #99E2D0;
+$dark-color-tertiary: darken(#99E2D0, 50%);
 
-$heart-start:white;
+$heart-start:#FFFFFF;
 $heart-end:linear-gradient(to top left, #FF79DA 0%, #9356DC 100%);
 
 $background-lightgrey:rgb(234, 234, 234);
