@@ -10,9 +10,14 @@
     cursor: pointer;
     box-shadow: $box-shadow;
     margin:0 auto;
+    opacity: 1;
+    transition: 200ms;
     &.menu {
-        width: 45%;
-        
+        width: 45%; 
+    }
+    &:hover {
+        opacity: 0.9;
+        box-shadow: 2px 3px 14px -3px $background-dark-grey
     }
 
     }

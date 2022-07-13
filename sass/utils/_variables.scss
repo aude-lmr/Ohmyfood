@@ -3,17 +3,18 @@ $color-secondary: #FF79DA;
 $color-tertiary: #99E2D0;
 $dark-color-tertiary: darken(#99E2D0, 50%);
 
-$heart-start:#FFFFFF;
+$heart-start:#FFF;
 $heart-end:linear-gradient(to top left, #FF79DA 0%, #9356DC 100%);
 
 $background-lightgrey:rgb(234, 234, 234);
 $background-lighter-grey:rgb(246, 246, 246);
 $background-dark-grey:#353535;
 $background-gradient:linear-gradient(175deg, #FF79DA 15%, #9356DC 100%);
-$background-items:white;
+$background-items:#FFF;
+$lighten-background-gradient: lighten($background-lighter-grey,50%);
 
 $color-logo:  black; 
 
-$box-shadow:1px 4px 15px 1px rgb(0 0 0 / 20%);
+$box-shadow:2px 3px 8px -3px $background-dark-grey;
 
 $breakpoints: ("mobile": "480px","tablet": "768px");
