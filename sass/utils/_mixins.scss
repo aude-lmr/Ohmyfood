@@ -23,7 +23,12 @@
     position: relative;
     width: 100%;
     border-radius: 35px 35px 0 0;
-    border: 1px solid white;
     background: $background-lighter-grey;
     padding: 28px 0 0 0;
+}
+
+@mixin text-ellipsis {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
 }

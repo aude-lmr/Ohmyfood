@@ -98,7 +98,7 @@ h3 {
         display: flex;
         justify-content: flex-start;
         align-items: center;
-        margin: 0 0 20px 6px;
+        margin: 0 5px 5px 6px;
         align-items: center;
     }
 
@@ -114,14 +114,17 @@ h3 {
                 border-radius: 10px;
                 min-height: 50px;
                 cursor: pointer;
-                box-shadow: 1px 4px 15px 1px rgb(0 0 0 / 20%);
+                box-shadow: 1px 0px 7px 1px rgb(0 0 0 / 12%);
                 justify-content: space-between;
                 align-items: center;
-                margin: 5px 0;
+                margin: 6px 0;
+                // &::hover {
+                //     box-shadow: 1px 0px 7px 7px rgb(0 0 0 / 19%);
+                // }
             }
             h2 {
                 font-size: 14px;
-                margin: 0 0 5px 20px;
+                margin: 20px 0 5px 20px;
                 text-transform: uppercase;
                 font-weight: 400;
                 align-self: flex-start;
@@ -130,21 +133,20 @@ h3 {
                 height: 3px;
                 width: 10%;
                 border: solid 2px #99E2D0;
-                margin: 0 0 5px 20px;
+                margin: 0 0 8px 20px;
                 align-self: flex-start;
             }
             h3 {
                 text-align: start;
-                font-size: 14px;
+                font-size: 13px;
                 padding: 0 10px;
+                // @include text-ellipsis;
             }
             h4 {
                 font-size: 12px;
                 font-weight: 400;
                 padding: 0 10px;
-                overflow: hidden;
-                text-overflow: ellipsis;
-                white-space: nowrap;
+                @include text-ellipsis;
             }
             p {
                 font-size: 12px;

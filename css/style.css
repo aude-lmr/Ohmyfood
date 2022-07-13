@@ -97,7 +97,6 @@ h3 {
   position: relative;
   width: 100%;
   border-radius: 35px 35px 0 0;
-  border: 1px solid white;
   background: rgb(246, 246, 246);
   padding: 28px 0 0 0;
 }
@@ -111,7 +110,7 @@ h3 {
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  margin: 0 0 20px 6px;
+  margin: 0 5px 5px 6px;
   align-items: center;
 }
 .meals .meals-list {
@@ -127,14 +126,14 @@ h3 {
   border-radius: 10px;
   min-height: 50px;
   cursor: pointer;
-  box-shadow: 1px 4px 15px 1px rgba(0, 0, 0, 0.2);
+  box-shadow: 1px 0px 7px 1px rgba(0, 0, 0, 0.12);
   justify-content: space-between;
   align-items: center;
-  margin: 5px 0;
+  margin: 6px 0;
 }
 .meals .meals-list h2 {
   font-size: 14px;
-  margin: 0 0 5px 20px;
+  margin: 20px 0 5px 20px;
   text-transform: uppercase;
   font-weight: 400;
   align-self: flex-start;
@@ -143,12 +142,12 @@ h3 {
   height: 3px;
   width: 10%;
   border: solid 2px #99E2D0;
-  margin: 0 0 5px 20px;
+  margin: 0 0 8px 20px;
   align-self: flex-start;
 }
 .meals .meals-list h3 {
   text-align: start;
-  font-size: 14px;
+  font-size: 13px;
   padding: 0 10px;
 }
 .meals .meals-list h4 {
@@ -323,6 +322,7 @@ h3 {
 }
 .btn.gradient.menu {
   width: 45%;
+  margin: 15px auto 0;
 }
 
 .search-bar {
@@ -498,6 +498,7 @@ h3 {
 
 .main-menu {
   background: rgb(246, 246, 246);
+  padding: 0 0 20px 0;
 }
 
 .background-img {
@@ -562,7 +563,7 @@ header.menu .return {
   text-align: right;
 }
 header.menu .fa-arrow-left {
-  font-size: 20px;
+  font-size: 18px;
   color: black;
 }
 
