@@ -20,22 +20,31 @@
 </head>
 
 <body>
+    <!-- Loading spinner -->
+    <div class="loader-container">
+        <div class="loader">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </div>
     <!-- Logo -->
     <header>
         <h1 class="logo">ohmyfood</h1>
     </header>
-    <!-- Zone de recherche -->
-    <nav>
-        <div class="search-bar">
-            <form>
-                <span class="search-bar__icon"><i class="fa-solid fa-location-dot"></i></span>
-                <input type="search" value="Paris, Belleville" placeholder="Paris, Belleville"
-                    name="search-bar__location" id="search-bar__location">
-            </form>
-        </div>
-    </nav>
 
     <main>
+        <!-- Zone de recherche -->
+        <section>
+            <div class="search-bar">
+                <form>
+                    <span class="search-bar__icon"><i class="fa-solid fa-location-dot"></i></span>
+                    <input type="search" value="Paris, Belleville" placeholder="Paris, Belleville"
+                        name="search-bar__location" id="search-bar__location">
+                </form>
+            </div>
+        </section>
+
         <!-- Explorer -->
         <section class="explorer">
             <h1 class="explorer__title">Réservez le menu qui vous convient</h1>
