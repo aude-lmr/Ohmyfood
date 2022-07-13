@@ -362,6 +362,7 @@ h3 {
 }
 .btn.gradient.menu {
   width: 45%;
+  margin: 18px auto 0;
 }
 .btn.gradient:hover {
   opacity: 0.9;
