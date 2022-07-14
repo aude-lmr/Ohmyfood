@@ -5,9 +5,9 @@
 }
 
 @mixin heading-menu {
-    font-size: 25px;
-    font-family: 'Shrikhand';
-    margin: 0 20px;
+    font-size: 21px;
+    font-family: "Shrikhand";
+    margin: 0 20px 0 6px;
     font-weight: 500;
 }
 
@@ -31,4 +31,10 @@
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
+}
+
+@mixin centrer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }

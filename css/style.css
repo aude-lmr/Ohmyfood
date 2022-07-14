@@ -80,7 +80,7 @@ p.explorer__txt {
 
 h2 {
   font-size: 18px;
-  margin: 0px 30px 15px;
+  margin: 0px 14px 15px;
   font-weight: 600;
 }
 
@@ -101,9 +101,9 @@ h3 {
   padding: 28px 0 0 0;
 }
 .meals h1 {
-  font-size: 25px;
+  font-size: 21px;
   font-family: "Shrikhand";
-  margin: 0 20px;
+  margin: 0 20px 0 6px;
   font-weight: 500;
 }
 .meals .meals-title {
@@ -119,22 +119,9 @@ h3 {
   margin: 0 0 15px;
   align-items: center;
 }
-.meals .meals-list .meals-items {
-  display: flex;
-  width: 90%;
-  background: white;
-  border-radius: 10px;
-  min-height: 50px;
-  cursor: pointer;
-  box-shadow: 1px 0px 7px 1px rgba(0, 0, 0, 0.12);
-  justify-content: space-between;
-  align-items: center;
-  margin: 6px 0;
-  animation: fade 12s;
-}
 .meals .meals-list h2 {
   font-size: 14px;
-  margin: 20px 0 5px 20px;
+  margin: 20px 0 5px 12px;
   text-transform: uppercase;
   font-weight: 400;
   align-self: flex-start;
@@ -143,53 +130,86 @@ h3 {
   height: 3px;
   width: 10%;
   border: solid 2px #99E2D0;
-  margin: 0 0 8px 20px;
+  margin: 0 0 8px 12px;
   align-self: flex-start;
 }
-.meals .meals-list h3 {
+.meals .meals-list .meals-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 95%;
+}
+.meals .meals-list .meals-container .meals-items {
+  display: flex;
+  width: 100%;
+  background: white;
+  border-radius: 10px;
+  cursor: pointer;
+  box-shadow: 1px 0px 7px 1px rgba(0, 0, 0, 0.12);
+  justify-content: space-between;
+  align-items: center;
+  margin: 6px 0px;
+  animation: fade 12s;
+  overflow: hidden;
+}
+.meals .meals-list .meals-container .meals-items h3 {
   text-align: start;
   font-size: 13px;
-  padding: 0 10px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  padding: 0;
 }
-.meals .meals-list h4 {
+.meals .meals-list .meals-container .meals-items h4 {
   font-size: 12px;
   font-weight: 400;
-  padding: 0 10px;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
 }
-.meals .meals-list p {
+.meals .meals-list .meals-container .meals-items p {
   font-size: 12px;
   font-weight: 700;
 }
-.meals .meals-list .meals-name {
+.meals .meals-list .meals-container .meals-items .meals-name {
   display: flex;
   flex-direction: column;
-  height: 100%;
-  width: 65%;
+  padding: 0 0 0 8px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
-.meals .meals-list .meals-price {
-  width: 5%;
-  position: relative;
-  top: 10px;
-  margin-right: 20px;
+.meals .meals-list .meals-container .meals-items .meals-metadata {
+  display: flex;
+  transform: translateX(50px);
 }
-.meals .meals-list .meals-check {
-  display: none;
+.meals .meals-list .meals-container .meals-items .meals-price {
+  display: flex;
+  align-items: flex-end;
+  padding: 10px;
+}
+.meals .meals-list .meals-container .meals-items .meals-check {
   position: relative;
   width: 50px;
   background-color: #99E2D0;
   border-radius: 0 10px 10px 0;
-  min-height: 50px;
-  transform: none;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-.meals .meals-list .meals-check .fa-circle-check {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  color: #FFFFFF;
+.meals .meals-list .meals-container .meals-items .meals-check span {
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  background-color: #FFFFFF;
+  color: #99E2D0;
+  font-size: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: spin 800ms linear 3 forwards;
+  transform: rotate(0deg);
 }
 
 .fa-heart {
@@ -232,7 +252,7 @@ h3 {
   width: 100%;
   height: 100%;
   top: 0;
-  z-index: 1;
+  z-index: 3;
   background-color: rgb(246, 246, 246);
   animation: loader 6s ease-in-out both;
 }
@@ -269,7 +289,7 @@ h3 {
   border-radius: 50%;
   position: absolute;
   left: 0px;
-  animation: dot 3s ease-out alternate infinite;
+  animation: dot 3s ease-out alternate;
   animation-fill-mode: both;
 }
 .loader-container .loader span:nth-child(1)::before {
@@ -279,7 +299,7 @@ h3 {
   animation-delay: 1s;
 }
 .loader-container .loader span:nth-child(3)::before {
-  animation-delay: 2s;
+  animation-delay: 1.9s;
 }
 
 @keyframes dot {
@@ -308,40 +328,24 @@ h3 {
     z-index: -1;
   }
 }
-.meals-items:nth-child(1) {
-  animation-delay: 3s;
-}
-.meals-items:nth-child(2) {
-  animation-delay: 6s;
-}
-.meals-items:nth-child(3) {
-  animation-delay: 9s;
-}
-.meals-items:nth-child(4) {
-  animation-delay: 12s;
-}
-.meals-items:nth-child(5) {
-  animation-delay: 15;
-}
-.meals-items:nth-child(6) {
-  animation-delay: 18s;
-}
-.meals-items:nth-child(7) {
-  animation-delay: 21s;
-}
-.meals-items:nth-child(8) {
-  animation-delay: 24s;
-}
-.meals-items:nth-child(9) {
-  animation-delay: 17s;
+.meals-items:hover .meals-metadata {
+  animation: entrer 1s forwards;
 }
 
-@keyframes fade {
+@keyframes entrer {
   0% {
-    opacity: 0;
+    transform: translateX(50px);
   }
   100% {
-    opacity: 1;
+    transform: translateX(0);
+  }
+}
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
   }
 }
 .btn.gradient {
@@ -432,7 +436,7 @@ h3 {
   display: flex;
   align-items: center;
   position: relative;
-  width: 85%;
+  width: 92%;
   height: 55px;
   margin: 0 0 12px;
   border: none;
@@ -458,16 +462,16 @@ h3 {
 }
 .ftng__number {
   position: absolute;
-  left: -9px;
+  left: -8px;
   display: inline-flex;
   justify-content: center;
   align-items: center;
-  font-size: 11px;
+  font-size: 10px;
   color: white;
   border: solid 3px #9356DC;
   background: #9356DC;
-  min-height: 20px;
-  min-width: 20px;
+  min-height: 18px;
+  min-width: 18px;
   border-radius: 50%;
 }
 
@@ -533,7 +537,7 @@ h3 {
     flex-wrap: nowrap;
   }
   .restaurants__cards {
-    width: 90%;
+    width: 95%;
   }
   .restaurants__body {
     flex-direction: column;
@@ -581,7 +585,7 @@ footer a {
   footer {
     display: flex;
     flex-direction: column;
-    padding: 15px 25px 31px;
+    padding: 15px 13px 31px;
   }
   footer ul {
     flex-direction: column;

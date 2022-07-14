@@ -76,7 +76,7 @@ p.explorer__txt {
 
 h2 {
     font-size: 18px;
-    margin: 0px 30px 15px;
+    margin: 0px 14px 15px;
     font-weight: 600;
 }
 
@@ -107,83 +107,88 @@ h3 {
         flex-direction: column;
         margin: 0 0 15px;
         align-items: center;
-            .meals-items {
-                display: flex;
-                width: 90%;
-                background: white;
-                border-radius: 10px;
-                min-height: 50px;
-                cursor: pointer;
-                box-shadow: 1px 0px 7px 1px rgb(0 0 0 / 12%);
-                justify-content: space-between;
-                align-items: center;
-                margin: 6px 0;
-                animation: fade 12s;
-                // &::hover {
-                //     box-shadow: 1px 0px 7px 7px rgb(0 0 0 / 19%);
-                // }
-            }
-            h2 {
-                font-size: 14px;
-                margin: 20px 0 5px 20px;
-                text-transform: uppercase;
-                font-weight: 400;
-                align-self: flex-start;
-            }
-            .underline {
-                height: 3px;
-                width: 10%;
-                border: solid 2px #99E2D0;
-                margin: 0 0 8px 20px;
-                align-self: flex-start;
-            }
-            h3 {
-                text-align: start;
-                font-size: 13px;
-                padding: 0 10px;
-                // @include text-ellipsis;
-            }
-            h4 {
-                font-size: 12px;
-                font-weight: 400;
-                padding: 0 10px;
-                @include text-ellipsis;
-            }
-            p {
-                font-size: 12px;
-                font-weight: 700;
-            }
-            .meals-name {
+        h2 {
+            font-size: 14px;
+            margin: 20px 0 5px 12px;
+            text-transform: uppercase;
+            font-weight: 400;
+            align-self: flex-start;
+        }
+        .underline {
+            height: 3px;
+            width: 10%;
+            border: solid 2px #99E2D0;
+            margin: 0 0 8px 12px;
+            align-self: flex-start;
+        }
+            .meals-container {
                 display: flex;
                 flex-direction: column;
-                height: 100%;
-                width: 65%;
-            }
-            .meals-price {
-                width: 5%;
-                position: relative;
-                top: 10px;
-                margin-right: 20px;
-            }
-            .meals-check {
-                display: none;
-                position: relative;
-                width: 50px;
-                background-color: $color-tertiary;
-                border-radius: 0 10px 10px 0;
-                min-height: 50px;
-                transform:none;
-                .fa-circle-check {
-                    position: absolute;
-                    top: 50%;
-                    left: 50%;
-                    transform: translate(-50%,-50%);
-                    color: #FFFFFF;
+                align-items: center;
+                width: 95%;
+                .meals-items {
+                    display: flex;
+                    width: 100%;
+                    background: white;
+                    border-radius: 10px;
+                    cursor: pointer;
+                    box-shadow: 1px 0px 7px 1px rgb(0 0 0 / 12%);
+                    justify-content: space-between;
+                    align-items: center;
+                    margin: 6px 0px;
+                    animation: fade 12s;
+                    overflow: hidden;
+                    h3 {
+                        text-align: start;
+                        font-size: 13px;
+                        @include text-ellipsis;
+                        padding: 0;
+                    }
+                    h4 {
+                        font-size: 12px;
+                        font-weight: 400;
+                        @include text-ellipsis;
+                    }
+                    p {
+                        font-size: 12px;
+                        font-weight: 700;
+                    }
+                    .meals-name {
+                        display: flex;
+                        flex-direction: column;
+                        padding: 0 0 0 8px;
+                        @include text-ellipsis;
+                    }
+                    .meals-metadata {
+                        display: flex;
+                        transform: translateX(50px);
+                    }
+                    .meals-price {
+                        display: flex;
+                        align-items: flex-end;
+                        padding: 10px;
+                    }
+                    .meals-check {
+                        position: relative;
+                        width: 50px;
+                        background-color: $color-tertiary;
+                        border-radius: 0 10px 10px 0;
+                        height: 50px;
+                        @include centrer;
+                        span {
+                            height: 20px;
+                            width: 20px;
+                            border-radius: 50%;
+                            background-color: #FFFFFF;
+                            color: #99E2D0;
+                            font-size: 12px;
+                            @include centrer;
+                            animation: spin 800ms linear 3 forwards;
+                            transform: rotate(0deg);
+                        }
+        
+                    }
                 }
-                // &:hover + .meal-check {
-                //     display: inline-block;
-                //     transform: translate(-50px, 0px);
-                // }
             }
     }
 }
