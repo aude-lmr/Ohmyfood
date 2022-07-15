@@ -80,13 +80,16 @@
                 animation-fill-mode: both;
             }
             &:nth-child(1)::before {
-                animation-delay: 0.2s;
+                // animation-delay: 0.2s;
+                animation: dot 3s ease-in-out  alternate backwards infinite;
             }
             &:nth-child(2)::before {
-                animation-delay: 1s;
+                // animation-delay: 1s;
+                animation: dot 3s ease-in-out 1.5s alternate backwards infinite;
             }
             &:nth-child(3)::before {
-                animation-delay: 1.9s;
+                // animation-delay: 1.9s;
+                animation: dot 3s ease-in-out 2.5s alternate backwards infinite;
             }
         }
 }
@@ -94,14 +97,8 @@
  
 
 @keyframes dot {
-    20% {
-        opacity: 0.2;
-    }
-    40% {
-        opacity: 0.5;
-    }
     50%,75% {
-        transform: scale(1.4);
+        transform: scale(1.6);
         opacity: 0.6;
     }
     100% {
@@ -123,52 +120,59 @@
 
 // Menus
 
-// .meals-list {
-//     &:nth-child(1) {
-//         animation-delay: 3s;
-//         background-color: red;
-//     }
-//     &:nth-child(2) {
-//         animation-delay: 6s;
-//     }
-//     &:nth-child(3) {
-//         animation-delay: 9s;
-//     }
-//     &:nth-child(4) {
-//         animation-delay: 12s;
-//     }
-//     &:nth-child(5) {
-//         animation-delay: 15;
-//         background-color: red;
-//     }
-//     &:nth-child(6) {
-//         animation-delay: 18s;
-//     }
-//     &:nth-child(7) {
-//         animation-delay: 21s;
-//     }
-//     &:nth-child(8) {
-//         animation-delay: 24s;
-//     }
-//     &:nth-child(9) {
-//         animation-delay: 17s;
-//     }
-// }
-
-// @keyframes fade {
-//     0% {
-//         opacity:0;
-//     }
-//     100% {
-//         opacity:1;
-//     }
-// }
-
-// Check
-.meals-items:hover .meals-metadata {
-    animation: entrer 1s forwards;
+.meals-items {
+    &:nth-child(1) {
+        animation: appear 1s ease-in-out both 0s;
+    }
+    &:nth-child(2) {
+        animation: appear 1s ease-in-out both 0.4s;
+    }
+    &:nth-child(3) {
+        animation: appear 1s ease-in-out both 0.8s;
+    }
 }
 
+@keyframes appear {
+    0% {
+        opacity:0;
+        transform: translate(0px, 10px);
+    }
+    100% {
+        opacity:1;
+        transform: translate(0px, 0px);
+    }
+}
+
+// Check
+.meals-items:hover { 
+    .meals-metadata {
+        animation: entrer 1s linear forwards;
+    
+    }
+    span {
+        animation: spin 550ms linear 1 both running 0.5s;
+    }
+
+}
+
+.meals-check {
+    position: relative;
+    width: 50px;
+    background-color: $color-tertiary;
+    border-radius: 0 10px 10px 0;
+    height: 50px;
+    @include centrer;
+    span {
+        height: 20px;
+        width: 20px;
+        border-radius: 50%;
+        background-color: #FFFFFF;
+        color: #99E2D0;
+        font-size: 12px;
+        @include centrer;
+        animation: spin 600ms linear 1 both paused;
+    }
+}
 
 @keyframes entrer {
     0% {
@@ -179,6 +183,7 @@
     }
 
 }
+
 
 @keyframes spin {
     0% {

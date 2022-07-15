@@ -1,10 +1,10 @@
+@import "./base/base";
 @import "./utils/variables";
 @import "./utils/mixins";
-@import "./base/base";
 @import "./base/typography";
-@import "./components/animations";
-@import "./components/buttons";
+@import "./layouts/header";
+@import "./layouts/footer";
 @import "./pages/about";
 @import "./pages/menu";
-@import "./layouts/footer";
-@import "./layouts/header";
+@import "./components/animations";
+@import "./components/buttons";

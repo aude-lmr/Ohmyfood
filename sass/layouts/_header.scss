@@ -6,11 +6,13 @@ header.menu {
         width: 70%;
     }
     .return {
+        display: flex;
         width: 15%;
         text-align: right;
+        justify-content: center;
     }
     .fa-arrow-left {
-        font-size: 18px;
+        font-size: 17px;
         color: $color-logo;
     }
 
