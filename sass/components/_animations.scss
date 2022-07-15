@@ -42,7 +42,6 @@
     width: 100%;
     height: 100%;
     top: 0;
-    z-index: 3;
     background-color: $background-lighter-grey;
     animation: loader 3s linear both;
     .loader {
@@ -105,24 +104,20 @@
 }
 
 @keyframes loader {
-    0%,75% {
+    0%,85% {
         opacity: 1;
-        // transform: translate(0);
-        transform: scale(1);
-        background: #FFFFFF;
+        z-index: 1;
     }
+
     100% {
         opacity: 0;
         z-index: -1;
-        background: transparent;
-        // transform: translate(90%);
-        transform: scale(0);
     }
 }
 
 // Menus
 
-.meals-items {
+.meals-items { 
     &:nth-child(1) {
         animation: appear 0.9s linear backwards 0.1s;
     }
@@ -149,15 +144,6 @@
 }
 
 // Check
-.meals-items:hover { 
-    .meals-metadata {
-        animation: entrer 1s linear both;
-    }
-    span {
-        animation: spin 550ms linear 1 both running 0.5s;
-    }
-
-}
 
 .meals-check {
     position: relative;
@@ -174,7 +160,16 @@
         color: #99E2D0;
         font-size: 12px;
         @include centrer;
-        animation: spin 600ms linear 1 both paused;
+        // animation: spin 300ms linear 1 both paused;
+    }
+}
+
+.meals-items:hover { 
+    .meals-metadata {
+        animation: entrer 1s linear both;
+    }
+    span {
+        animation: spin 300ms linear 1 both 0.5s;
     }
 }
 

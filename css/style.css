@@ -386,7 +386,7 @@ footer a {
   padding: 3px 6px;
   font-weight: 500;
   border-radius: 2px;
-  color: #1b6150;
+  color: #278870;
 }
 .restaurants__cards__body {
   display: flex;
@@ -473,7 +473,6 @@ footer a {
   width: 100%;
   height: 100%;
   top: 0;
-  z-index: 3;
   background-color: rgb(246, 246, 246);
   animation: loader 3s linear both;
 }
@@ -534,16 +533,13 @@ footer a {
   }
 }
 @keyframes loader {
-  0%, 75% {
+  0%, 85% {
     opacity: 1;
-    transform: scale(1);
-    background: #FFFFFF;
+    z-index: 1;
   }
   100% {
     opacity: 0;
     z-index: -1;
-    background: transparent;
-    transform: scale(0);
   }
 }
 .meals-items:nth-child(1) {
@@ -569,13 +565,6 @@ footer a {
     transform: translateY(0);
   }
 }
-.meals-items:hover .meals-metadata {
-  animation: entrer 1s linear both;
-}
-.meals-items:hover span {
-  animation: spin 550ms linear 1 both running 0.5s;
-}
-
 .meals-check {
   position: relative;
   width: 50px;
@@ -596,7 +585,13 @@ footer a {
   display: flex;
   justify-content: center;
   align-items: center;
-  animation: spin 600ms linear 1 both paused;
+}
+
+.meals-items:hover .meals-metadata {
+  animation: entrer 1s linear both;
+}
+.meals-items:hover span {
+  animation: spin 300ms linear 1 both 0.5s;
 }
 
 @keyframes entrer {
