@@ -475,7 +475,7 @@ footer a {
   top: 0;
   z-index: 3;
   background-color: rgb(246, 246, 246);
-  animation: loader 6s ease-in-out both;
+  animation: loader 3.5s linear both;
 }
 .loader-container .loader {
   width: 230px;
@@ -510,27 +510,27 @@ footer a {
   border-radius: 50%;
   position: absolute;
   left: 0px;
-  animation: dot 3s ease-out alternate;
+  animation: dot 5s ease-in alternate-reverse;
   animation-fill-mode: both;
 }
 .loader-container .loader span:nth-child(1)::before {
-  animation: dot 3s ease-in-out alternate backwards infinite;
+  animation: dot 3s ease-out alternate-reverse infinite 0.2s;
 }
 .loader-container .loader span:nth-child(2)::before {
-  animation: dot 3s ease-in-out 1.5s alternate backwards infinite;
+  animation: dot 3s ease-out alternate-reverse backwards infinite 1s;
 }
 .loader-container .loader span:nth-child(3)::before {
-  animation: dot 3s ease-in-out 2.5s alternate backwards infinite;
+  animation: dot 3s ease-out alternate-reverse backwards infinite 1.5s;
 }
 
 @keyframes dot {
   50%, 75% {
-    transform: scale(1.6);
-    opacity: 0.6;
+    transform: scale(1.4);
+    opacity: 0.5;
   }
   100% {
     opacity: 0;
-    transform: scale(1.2);
+    transform: scale(1);
   }
 }
 @keyframes loader {
@@ -538,33 +538,36 @@ footer a {
     opacity: 1;
   }
   100% {
-    visibility: hidden;
     opacity: 0;
     z-index: -1;
+    background: transparent;
   }
 }
 .meals-items:nth-child(1) {
-  animation: appear 1s ease-in-out both 0s;
+  animation: appear 0.9s ease-out forwards 0s;
 }
 .meals-items:nth-child(2) {
-  animation: appear 1s ease-in-out both 0.4s;
+  animation: appear 0.9s ease-out forwards 0.2s;
 }
 .meals-items:nth-child(3) {
-  animation: appear 1s ease-in-out both 0.8s;
+  animation: appear 0.9s ease-out forwards 0.5s;
+}
+.meals-items:nth-child(4) {
+  animation: appear 0.9s ease-out forwards 0.7s;
 }
 
 @keyframes appear {
   0% {
     opacity: 0;
-    transform: translate(0px, 10px);
+    transform: translateY(10);
   }
   100% {
     opacity: 1;
-    transform: translate(0px, 0px);
+    transform: translateY(0);
   }
 }
 .meals-items:hover .meals-metadata {
-  animation: entrer 1s linear forwards;
+  animation: entrer 1s linear both;
 }
 .meals-items:hover span {
   animation: spin 550ms linear 1 both running 0.5s;
