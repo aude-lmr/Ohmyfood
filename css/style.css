@@ -475,7 +475,7 @@ footer a {
   top: 0;
   z-index: 3;
   background-color: rgb(246, 246, 246);
-  animation: loader 3.5s linear both;
+  animation: loader 3s linear both;
 }
 .loader-container .loader {
   width: 230px;
@@ -536,13 +536,14 @@ footer a {
 @keyframes loader {
   0%, 75% {
     opacity: 1;
-    transform: translate(0);
+    transform: scale(1);
+    background: #FFFFFF;
   }
   100% {
     opacity: 0;
     z-index: -1;
     background: transparent;
-    transform: translate(90%);
+    transform: scale(0);
   }
 }
 .meals-items:nth-child(1) {
