@@ -517,10 +517,10 @@ footer a {
   animation: dot 3s ease-out alternate-reverse infinite 0.2s;
 }
 .loader-container .loader span:nth-child(2)::before {
-  animation: dot 3s ease-out alternate-reverse backwards infinite 1s;
+  animation: dot 3s ease-out alternate-reverse both infinite 1s;
 }
 .loader-container .loader span:nth-child(3)::before {
-  animation: dot 3s ease-out alternate-reverse backwards infinite 1.5s;
+  animation: dot 3s ease-out alternate-reverse both infinite 1.5s;
 }
 
 @keyframes dot {
@@ -534,13 +534,15 @@ footer a {
   }
 }
 @keyframes loader {
-  0% {
+  0%, 75% {
     opacity: 1;
+    transform: translate(0);
   }
   100% {
     opacity: 0;
     z-index: -1;
     background: transparent;
+    transform: translate(90%);
   }
 }
 .meals-items:nth-child(1) {

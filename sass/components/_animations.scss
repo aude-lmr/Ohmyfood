@@ -83,10 +83,10 @@
                 animation: dot 3s ease-out alternate-reverse infinite 0.2s;
             }
             &:nth-child(2)::before {
-                animation: dot 3s ease-out alternate-reverse backwards infinite 1s;
+                animation: dot 3s ease-out alternate-reverse both infinite 1s;
             }
             &:nth-child(3)::before {
-                animation: dot 3s ease-out alternate-reverse backwards infinite 1.5s;
+                animation: dot 3s ease-out alternate-reverse both infinite 1.5s;
             }
         }
 }
@@ -105,13 +105,15 @@
 }
 
 @keyframes loader {
-    0% {
+    0%,75% {
         opacity: 1;
+        transform: translate(0);
     }
     100% {
         opacity: 0;
         z-index: -1;
         background: transparent;
+        transform: translate(90%);
     }
 }
 
