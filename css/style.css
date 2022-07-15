@@ -544,22 +544,22 @@ footer a {
   }
 }
 .meals-items:nth-child(1) {
-  animation: appear 0.9s ease-out forwards 0s;
+  animation: appear 0.9s linear backwards 0.1s;
 }
 .meals-items:nth-child(2) {
-  animation: appear 0.9s ease-out forwards 0.2s;
+  animation: appear 0.9s linear backwards 0.3s;
 }
 .meals-items:nth-child(3) {
-  animation: appear 0.9s ease-out forwards 0.5s;
+  animation: appear 0.9s linear backwards 0.6s;
 }
 .meals-items:nth-child(4) {
-  animation: appear 0.9s ease-out forwards 0.7s;
+  animation: appear 0.9s linear backwards 0.9s;
 }
 
 @keyframes appear {
   0% {
     opacity: 0;
-    transform: translateY(10);
+    transform: translate(-40);
   }
   100% {
     opacity: 1;
