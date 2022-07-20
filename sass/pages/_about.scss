@@ -56,17 +56,16 @@
     &__list {
         width: 100%;
         display: flex;
-        flex-direction: column;
+        flex-direction: row;
         align-items: center;
     }
     &__btn {
         display: flex;
         align-items: center;
-        // cursor: pointer;
         position:relative;
         width: 92%;
         height: 55px;
-        margin: 0 0 12px;
+        margin: 0 10px 12px;
         border: none;
         border-radius: 15px;
         background: $background-lighter-grey;
@@ -79,10 +78,9 @@
         }
         p {
             font-weight: 600;
-            font-size: 14px;
+            font-size: 13px;
             text-align: center;
-            margin: 0 0 0 30px;
-        
+            margin: 0 0 0 15px;
         }
         span.ftng__icons {
             margin: 0 0 0 30px;
@@ -102,6 +100,20 @@
         min-height: 18px;
         min-width: 18px;
         border-radius: 50%;
+    }
+    @include mobile-only {
+        &__list {
+            width: 100%;
+            flex-direction: column;
+        }
+        &__btn {
+            margin: 0 0 12px;
+        }
+        p {
+            font-size: 14px;
+            text-align: center;
+            margin: 0 0 0 30px;
+        }
     }
 
 }

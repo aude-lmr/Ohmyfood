@@ -3,14 +3,14 @@ $color-secondary: #FF79DA;
 $color-tertiary: #99E2D0;
 $dark-color-tertiary: darken(#99E2D0, 40%);
 
-$heart-start:#FFF;
+$heart-start:linear-gradient(90deg, rgba(9,9,121,1) 0%, rgba(0,212,255,1) 0%, rgba(255,255,255,0) 0%);
 $heart-end:linear-gradient(to top left, #FF79DA 0%, #9356DC 100%);
 
 $background-lightgrey:rgb(234, 234, 234);
 $background-lighter-grey:rgb(246, 246, 246);
 $background-dark-grey:#353535;
 $background-gradient:linear-gradient(175deg, #FF79DA 15%, #9356DC 100%);
-$background-items:#FFF;
+$background-items:white;
 $lighten-background-gradient: lighten($background-lighter-grey,50%);
 
 $color-logo:  black; 

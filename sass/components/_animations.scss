@@ -135,7 +135,7 @@
 @keyframes appear {
     0% {
         opacity:0;
-        transform: translate(-40);
+        transform: translate(0,-40%);
     }
     100% {
         opacity:1;
@@ -160,7 +160,6 @@
         color: #99E2D0;
         font-size: 12px;
         @include centrer;
-        // animation: spin 300ms linear 1 both paused;
     }
 }
 
