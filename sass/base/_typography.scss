@@ -24,8 +24,6 @@ ul {
 }
 
 h1.logo { 
-    // display: flex;
-    // justify-content: center;
     align-items: center;
     font-family: Shrikhand;
     font-weight: 700;
@@ -47,8 +45,6 @@ h1.logo {
     @include mobile-only {
         width:100%;
         font-size: 30px;
-        // justify-content: center;
-        // flex-direction: row;
         text-align: center;
             &.footer {
                 margin: 0;

@@ -1,6 +1,5 @@
 // Coeur 
 .fa-heart {
-    position: relative;
     color: black;
     background-image: $heart-start;
     font-size: 20px;
@@ -9,7 +8,7 @@
         }
         
     &:hover::before {
-        animation: heart-animation 600ms ;
+            animation: heart-animation 600ms ;
             font-weight: bold;     
             background-image: $heart-end;
             -webkit-background-clip: text;
